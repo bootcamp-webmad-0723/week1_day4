@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const person = {
+            firstName: 'German',
+            lastName: 'Álvarez',
+            age: 37,
+            height: 192,
+            weight: 89.7,
+            celiac: false,
+            job: {
+                title: 'Instructor',
+                company: 'IH'
+            },
+            hobbies: ['tech', 'gadgets', 'rave', 'beers'],
+            subscriptions: [
+                {
+                    service: 'Amazon Prime',
+                    cost: 9.99
+                },
+                {
+                    service: 'HBO',
+                    cost: 12.99
+                },
+                {
+                    service: 'Spotify',
+                    cost: 12
+                }
+            ]
+        }
+
+        console.log('El objeto inicial es', person)
+
+        console.log('El tipo de un objeto es', typeof person)
+
+
+
+        // Access (getter, common)
+        console.log(`Me llamo ${person.firstName} ${person.lastName} y trabajo de ${person.job.title}`)
+
+        // Access (getter, brackets)
+        console.log(`Me llamo ${person['firstName']} ${person['lastName']}`)
+
+
+
+        // Access (getter, iterative)
+        for (let i = 0; i < person.hobbies.length; i++) {
+            console.log('Me gusta ->', person.hobbies[i])
+        }
+
+        // Access (alternative, forEach)
+        person.hobbies.forEach(function (eachHobby) {
+            console.log('ESTO ES', eachHobby)
+        })
+
+
+
+        // Access (iterative)
+        for (let i = 0; i < person.subscriptions.length; i++) {
+            console.log('Estoy suscrito a ->', person.subscriptions[i].service, 'por un total de', person.subscriptions[i].cost)
+        }
+
+        // Access (alternative, forEach)
+        person.subscriptions.forEach(function (eachSubscription) {
+            console.log('Estoy suscrito a ->', eachSubscription.service, 'por un total de', eachSubscription.cost)
+        })
+
+
+
+        // Access (setter)
+        person.job.company = 'Francachela'
+        console.log('Ahora trabajo en', person.job.company, '... D:')
+
+
+
+
+        // Object keys
+        console.log('Las claves del objeto son:', Object.keys(person))
+
+        // Object values
+        console.log('Los valores del objeto son:', Object.values(person))
+
+
+    </script>
+</body>
+
+</html>

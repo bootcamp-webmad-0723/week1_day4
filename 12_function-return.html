@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        function composeBookingDetails(guest, arrivalDate, nights, cost, roomCategory = 'ESTÁNDAR') {
+
+            const text = `Estimad@ ${guest.name}, su reserva para el día ${arrivalDate} (${nights} noches) en habitación ${roomCategory} está confirmada. Precio: ${cost}€`
+            return text
+        }
+
+        const booking1 = composeBookingDetails({ name: 'Germán Álvarez', age: 37 }, '17/05/24', 8, 746)
+        const booking2 = composeBookingDetails({ name: 'Irene Whatever', age: 88 }, '21/09/24', 4, 436, 'SUITE')
+
+        document.write(`<h1>${booking1}</h1>`)
+        console.warn(booking2)
+
+
+
+
+
+        console.log('------')
+
+
+
+
+        function isMultiple(value1, value2) {
+            if (value1 % value2 === 0) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+
+        const result = isMultiple(10, 5)
+        console.log('¿Son múltiplos 10 y 5?', result)
+
+
+
+
+        console.log('------')
+
+
+
+        function calculateTotalPrice(cost, taxPercent) {
+
+            const benefit = .1
+            const subtotal = cost + cost * benefit
+            const taxPart = subtotal * taxPercent
+
+            const total = subtotal + taxPart
+
+            return total
+        }
+
+
+        const price1 = calculateTotalPrice(10, .21)
+
+        console.log('EL total es', price1)
+
+
+
+    </script>
+</body>
+
+</html>

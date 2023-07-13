@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // function parameters
+        function sayHi(firstName, lastName) {
+            console.log(`¡Hola, ${firstName} ${lastName}!`)
+        }
+
+        sayHi('Nacho', 'Sansón')
+        sayHi('Samuele', 'Marino')
+
+
+
+
+
+
+        function composeBookingDetails(guest, arrivalDate, nights, cost, roomCategory = 'ESTÁNDAR') {
+
+            const text = `Estimad@ ${guest.name}, su reserva para el día ${arrivalDate} (${nights} noches) en habitación ${roomCategory} está confirmada. Precio: ${cost}€`
+            console.log(text)
+        }
+
+        composeBookingDetails({ name: 'Germán Álvarez', age: 37 }, '17/05/24', 8, 746)
+        composeBookingDetails({ name: 'Irene Whatever', age: 88 }, '21/09/24', 4, 436, 'SUITE')
+
+    </script>
+</body>
+
+</html>

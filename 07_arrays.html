@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        // Declaration
+        const drinks = ['Agua', 'Kas', 'Café', 'Cerveza', 'Cocacola', 'Monter', 'Jagger']
+
+        // Type
+        console.log('El tipo de un array es', typeof drinks)
+
+        // Log
+        console.log(drinks)
+
+        // Access (getter)
+        console.log('La segunda bebida es', drinks[1])
+
+        // Access (setter)
+        drinks[3] = 'Cervemocho'
+        console.log('Ahora las bebidas son', drinks)
+
+        // Length property
+        console.log('Hay un total de', drinks.length, 'bebidas')
+
+        // Adding last element (imperative)
+        drinks[drinks.length] = 'Fanta'
+        console.log('Ahora las bebidas son', drinks)
+
+        // Adding last element (declarative)
+        drinks.push('SevenUp')
+        console.log('Ahora las bebidas son', drinks)
+
+        // Adding elements on first position
+        drinks.unshift('Leche')
+        console.log('Ahora las bebidas son', drinks)
+
+        // Remove last element
+        drinks.pop()
+        console.log('Ahora las bebidas son', drinks)
+
+        // Removing values (several)
+        drinks.splice(0, 2)
+        console.log('Ahora las bebidas son', drinks)
+
+
+
+
+
+
+
+        // Split text into array
+        const string = 'Lorem ipsum dolor sit amet'
+        const words = string.split(' ')
+        console.log('Cada una de las palabras son:', words)
+
+
+    </script>
+</body>
+
+</html>
